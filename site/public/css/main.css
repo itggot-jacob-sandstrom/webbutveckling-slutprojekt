@@ -1,5 +1,7 @@
 body{
     margin: 0;
+    width: 100vw;
+    overflow: hidden;    
 }
 
 h1{
@@ -14,24 +16,30 @@ h1{
 }
 
 
-.start, .category{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
+.category{
     height: 100vh;
     position: relative;
 }
 
-.category{
+.category, .categorylink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.categorylink{
     text-decoration: none;
     color: black;
+    height: 100%;
+    width: 100%;
 }
 
 .arrowdown, .arrowup{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    padding: 10px;
 }
 
 .arrowdown{
