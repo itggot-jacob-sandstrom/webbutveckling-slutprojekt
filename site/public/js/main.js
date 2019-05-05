@@ -1,12 +1,18 @@
 objects = document.getElementsByClassName("category")
 
-window.scrollTo(0, 0);
+position = 0
+
+// window.location.href = 'index.html';
+
+position = Math.floor(window.scrollY / document.querySelector('.categorylink').clientHeight)
+// console.log(y)
 
 function load(){
-    position = 0
-    objects[0].scrollIntoView("smooth");
-    console.log("loaded")
-    start = document.querySelector(".start")
+    // objects[0].scrollIntoView({
+    //     behavior: "smooth"
+    // });
+    // console.log("loaded")
+    // start = document.querySelector(".start")
     // start.scrollIntoView("smooth");
 }
 
@@ -14,7 +20,9 @@ function scrollup(event){
     position -- 
     console.log("up")
     console.log(position)
-    objects[position].scrollIntoView("smooth");
+    objects[position].scrollIntoView({
+        behavior: "smooth"
+    });
     
 }
 
@@ -22,7 +30,9 @@ function scrolldown(event){
     position ++
     console.log("down")
     console.log(position)
-    objects[position].scrollIntoView("smooth");
+    objects[position].scrollIntoView({
+        behavior: "smooth"
+    });
 
 }
 
@@ -37,3 +47,20 @@ function scrolldown(event){
 //     up[index].addEventListener("click", scrollup);
     
 // }
+
+
+function menu_open(){
+    menu = document.querySelector(".sidebar")
+    menu.classList.toggle("active")
+    console.log("haskdj")
+}
+
+// s = document.querySelector(".menu")
+// s.addEventListener("click", menu_open)
+
+//  disables scroll on index
+if (document.URL.includes("index")) {
+    document.body.classList.add("disablescroll")
+}
+
+// console.log(document.URL)

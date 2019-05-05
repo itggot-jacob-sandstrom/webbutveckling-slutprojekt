@@ -1,18 +1,22 @@
 body{
     margin: 0;
     width: 100vw;
+}
+
+.disablescroll{
     overflow: hidden;    
 }
+
 
 h1{
     margin: 0;
 }
 
-.menubutton{
+.menu{
     position: fixed;
     top: 10px;
     right: 10px;
-
+    z-index: 10;
 }
 
 
@@ -28,7 +32,7 @@ h1{
 
 }
 
-.categorylink{
+.categorylink, a{
     text-decoration: none;
     color: black;
     height: 100%;
@@ -48,6 +52,75 @@ h1{
 
 .arrowup{
     top: 20px;
+}
+
+.sidebar{
+    position: fixed;
+    height: 100vh;
+    width: 130px;
+    top: 0;
+    padding: 40px 20px 20px 20px;
+    /* bottom: 0; */
+    right: -200px;
+    background-color: rgb(106, 115, 170);
+    border: solid 2px white;
+    /* border-bottom-right-radius: 70px; */
+    transition: 300ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.sidebar.active{
+    transition: 400ms;
+    right: 0;
+}
+
+.menuitems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuitem{
+    margin: 10px;
+    font-size: 2rem;
+}
+
+.contentbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: repeat(auto-fill, 50vw); */
+
+}
+
+.imgbox{
+    border: solid 1px blue;
+    height: 50vw;
+    box-sizing: border-box;
+}
+
+.imgbox:nth-of-type(8n+3){
+    grid-row: span 2;
+    height: 100vw;
+}
+
+.imgbox:nth-of-type(8n-2){
+    grid-row: span 2;
+    height: 100vw;
+}
+.imgbox:nth-of-type(4n-3){
+    grid-column: span 2;
+}
+
+footer{
+    height: 100px;
+
+}
+
+footer h3{
+    margin: 10px;
 }
 
 @media only screen and (min-width: 800px){
