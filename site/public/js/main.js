@@ -18,8 +18,6 @@ function load(){
 
 function scrollup(event){
     position -- 
-    console.log("up")
-    console.log(position)
     objects[position].scrollIntoView({
         behavior: "smooth"
     });
@@ -28,8 +26,6 @@ function scrollup(event){
 
 function scrolldown(event){
     position ++
-    console.log("down")
-    console.log(position)
     objects[position].scrollIntoView({
         behavior: "smooth"
     });
@@ -52,7 +48,6 @@ function scrolldown(event){
 function menu_open(){
     menu = document.querySelector(".sidebar")
     menu.classList.toggle("active")
-    console.log("haskdj")
 }
 
 // s = document.querySelector(".menu")
