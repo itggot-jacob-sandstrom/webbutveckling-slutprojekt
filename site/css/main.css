@@ -27,17 +27,24 @@ h1{
 .category{
     height: 100vh;
     position: relative;
+}
+
+.category, .imgbox{
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 
 #snowy{
-    background-image: url("../img/t.jpg");
+    background-image: url("../img/snowy_1_800x1024.jpg");
+}
+
+#mountains{
+    background-image: url("../img/mountain_2_800x1024.jpg");
 }
 
 #artistic{
-    background-image: url("../img/art_1_1920x1080.jpg");
+    background-image: url("../img/art_2_800x1024.jpg");
 }
 
 .category, .categorylink{
@@ -132,7 +139,7 @@ h1{
 }
 
 .imgbox{
-    border: solid 1px blue;
+    /* border: solid 1px blue; */
     height: 50vw;
     box-sizing: border-box;
 }
@@ -150,6 +157,37 @@ h1{
     grid-column: span 2;
 }
 
+.snow{
+    background-position: center;
+}
+
+.snow:nth-of-type(1){
+    background-image: url("../img/snowy_1_800x1024.jpg")
+}
+.snow:nth-of-type(2){
+    background-image: url("../img/snowy_2_800x1024.jpg")
+}
+.snow:nth-of-type(3){
+    background-image: url("../img/snowy_3_800x1024.jpg")
+}
+.snow:nth-of-type(4){
+    background-image: url("../img/snowy_4_800x1024.jpg")
+}
+.snow:nth-of-type(5){
+    background-image: url("../img/mountain_1_800x1024.jpg")
+}
+.snow:nth-of-type(6){
+    background-image: url("../img/mountain_2_800x1024.jpg")
+}
+.snow:nth-of-type(7){
+    background-image: url("../img/mountain_3_800x1024.jpg")
+}
+.snow:nth-of-type(8){
+    background-image: url("../img/mountain_4_800x1024.jpg")
+}
+
+
+
 footer{
     height: 100px;
 
@@ -160,5 +198,28 @@ footer h3{
 }
 
 @media only screen and (min-width: 800px){
-    
+    .snow:nth-of-type(1){
+        background-image: url("../img/snowy_1_1920x1080.jpg")
+    }
+    .snow:nth-of-type(2){
+        background-image: url("../img/snowy_2_1920x1080.jpg")
+    }
+    .snow:nth-of-type(3){
+        background-image: url("../img/snowy_3_1920x1080.jpg")
+    }
+    .snow:nth-of-type(4){
+        background-image: url("../img/snowy_4_1920x1080.jpg")
+    }
+    .snow:nth-of-type(5){
+        background-image: url("../img/mountain_1_1920x1080.jpg")
+    }
+    .snow:nth-of-type(6){
+        background-image: url("../img/mountain_2_1920x1080.jpg")
+    }
+    .snow:nth-of-type(7){
+        background-image: url("../img/mountain_3_1920x1080.jpg")
+    }
+    .snow:nth-of-type(8){
+        background-image: url("../img/mountain_4_1920x1080.jpg")
+    }
 }
