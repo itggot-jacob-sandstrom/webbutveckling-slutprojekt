@@ -36,6 +36,10 @@ h1{
     background-image: url("../img/t.jpg");
 }
 
+#artistic{
+    background-image: url("../img/art_1_1920x1080.jpg");
+}
+
 .category, .categorylink{
     display: flex;
     justify-content: center;
