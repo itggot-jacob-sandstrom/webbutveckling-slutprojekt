@@ -1,6 +1,14 @@
+:root{
+    --bgc: rgb(2,5,71);
+}
+
 body{
     margin: 0;
     width: 100vw;
+}
+
+.wrapper{
+    background-color: var(--bgc);
 }
 
 .disablescroll{
@@ -11,6 +19,11 @@ body{
 h1{
     margin: 0;
 }
+
+h3{
+    color: white;
+}
+
 
 .menu{
     position: fixed;
@@ -32,6 +45,7 @@ h1{
 .category, .imgbox{
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
 }
 
 
@@ -64,7 +78,7 @@ h1{
 .arrowdown, .arrowup{
     position: absolute;
     left: 50%;
-    transform: translate(-50%);
+    transform: translateX(-50%);
     padding: 10px;
     border: solid 3px black;
     border-radius: 50%;
@@ -85,16 +99,24 @@ h1{
 
 @keyframes size{
     0%{
-        padding: 10px;
+        border-width: 3px;
     }
     
     50%{
-        padding: 8px;
+        border-width: 5px;
     }
-
+    
     100%{
-        padding: 10px;
+        border-width: 3px;
     }
+}
+
+.start{
+    color: white;
+}
+
+.start .arrowdown{
+    border-color: white;
 }
 
 .sidebar{
@@ -105,7 +127,7 @@ h1{
     padding: 40px 20px 20px 20px;
     /* bottom: 0; */
     right: -200px;
-    background-color: rgb(106, 115, 170);
+    background-color: rgb(2,5,71);
     border: solid 2px white;
     /* border-bottom-right-radius: 70px; */
     transition: 300ms;
@@ -120,6 +142,10 @@ h1{
     right: 0;
 }
 
+.menu.active{
+    color: white;
+}
+
 .menuitems{
     display: flex;
     flex-direction: column;
@@ -127,6 +153,7 @@ h1{
 }
 
 .menuitem{
+    color: white;
     margin: 10px;
     font-size: 2rem;
 }
@@ -185,6 +212,12 @@ h1{
 .snow:nth-of-type(8){
     background-image: url("../img/mountain_4_800x1024.jpg")
 }
+.snow:nth-of-type(9){
+    background-image: url("../img/snowy_1_800x1024.jpg")
+}
+.snow:nth-of-type(10){
+    background-image: url("../img/snowy_2_800x1024.jpg")
+}
 
 
 
@@ -195,9 +228,80 @@ footer{
 
 footer h3{
     margin: 10px;
+    margin-left: 40px;
 }
 
+.contactbox{
+    display: flex;
+    
+}
+
+.contactinfo, .contactcategory{
+    list-style: none;
+    color: white;
+    margin-top: 0;
+}
+
+.contactcategory{
+    margin-left: 40px;
+    padding-left: 0;
+
+}
+
+.contactinfo{
+    padding-left: 10px;
+    
+}
+
+li{
+    margin-bottom: 5px;
+
+}
+
+
 @media only screen and (min-width: 800px){
+    .contentbox{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: repeat(auto-fill, 50vw); */
+    
+    }
+
+    .imgbox{
+        /* border: solid 1px blue; */
+        height: 25vw;
+        box-sizing: border-box;
+    }
+
+    .imgbox:nth-of-type(8n+3){
+        grid-row: span 2;
+        height: 50vw;
+    }
+    
+    .imgbox:nth-of-type(8n-2){
+        grid-row: span 2;
+        height: 50vw;
+    }
+    .imgbox:nth-of-type(4n-3){
+        grid-column: span 2;
+    }
+    .imgbox:nth-of-type(8n+0){
+        grid-column: span 2;
+    }
+
+
+    #snowy{
+        background-image: url("../img/snowy_1_1920x1080.jpg");
+    }
+    
+    #mountains{
+        background-image: url("../img/mountain_2_1920x1080.jpg");
+    }
+    
+    #artistic{
+        background-image: url("../img/art_2_1920x1080.jpg");
+    }
+
     .snow:nth-of-type(1){
         background-image: url("../img/snowy_1_1920x1080.jpg")
     }
@@ -221,5 +325,11 @@ footer h3{
     }
     .snow:nth-of-type(8){
         background-image: url("../img/mountain_4_1920x1080.jpg")
+    }
+    .snow:nth-of-type(9){
+        background-image: url("../img/snowy_1_1920x1080.jpg")
+    }
+    .snow:nth-of-type(10){
+        background-image: url("../img/snowy_2_1920x1080.jpg")
     }
 }

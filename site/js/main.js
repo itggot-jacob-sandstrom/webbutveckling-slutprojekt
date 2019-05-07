@@ -16,12 +16,24 @@ function load(){
     // start.scrollIntoView("smooth");
 }
 
+function menucolor(){
+    if(!document.querySelector(".sidebar").classList.contains("active")){
+
+        if(position == 0 && !document.querySelector(".sidebar").classList.contains("active")){
+            document.querySelector(".menu").classList.add("active")
+        }else{
+            document.querySelector(".menu").classList.remove("active")
+        }
+    }
+    // console.log(document.querySelector(".sidebar").classList.contains("active"))
+}
+
 function scrollup(event){
     position -- 
     objects[position].scrollIntoView({
         behavior: "smooth"
     });
-    
+    setTimeout(menucolor, 500)
 }
 
 function scrolldown(event){
@@ -29,7 +41,7 @@ function scrolldown(event){
     objects[position].scrollIntoView({
         behavior: "smooth"
     });
-
+    setTimeout(menucolor, 500)
 }
 
 // down = document.getElementsByClassName("arrowdown");
@@ -48,7 +60,16 @@ function scrolldown(event){
 function menu_open(){
     menu = document.querySelector(".sidebar")
     menu.classList.toggle("active")
+    if(position != 0 || !document.URL.includes("index")){
+        document.querySelector(".menu").classList.toggle("active")
+
+    }
 }
+
+window.setInterval(function(){
+    
+}, 500);
+
 
 // s = document.querySelector(".menu")
 // s.addEventListener("click", menu_open)
@@ -56,6 +77,9 @@ function menu_open(){
 //  disables scroll on index
 if (document.URL.includes("index")) {
     document.body.classList.add("disablescroll")
+    document.querySelector(".menu").classList.add("active")
+}else{
+    position = 1
 }
 
 // console.log(document.URL)
