@@ -2,24 +2,44 @@ objects = document.getElementsByClassName("category")
 
 position = 0
 
+disable = false
+
 // window.location.href = 'index.html';
 
-position = Math.floor(window.scrollY / document.querySelector('.categorylink').clientHeight)
+
+//  disables scroll on index
+if (document.URL.includes("index")) {
+    document.body.classList.add("disablescroll")
+    position = Math.floor(window.scrollY / document.querySelector('.categorylink').clientHeight)
+    if( position == 0){
+
+        document.querySelector(".menu").classList.add("active")
+    }
+    disable = true
+}else{
+    position = 1
+}
+
+if (document.URL.includes("shop")){
+    disable = true
+    document.querySelector(".menu").classList.add("active")
+}
+console.log(document.URL)
 // console.log(y)
 
 function load(){
     // objects[0].scrollIntoView({
-    //     behavior: "smooth"
-    // });
-    // console.log("loaded")
-    // start = document.querySelector(".start")
-    // start.scrollIntoView("smooth");
-}
-
-function menucolor(){
-    if(!document.querySelector(".sidebar").classList.contains("active")){
-
-        if(position == 0 && !document.querySelector(".sidebar").classList.contains("active")){
+        //     behavior: "smooth"
+        // });
+        // console.log("loaded")
+        // start = document.querySelector(".start")
+        // start.scrollIntoView("smooth");
+    }
+    
+    function menucolor(){
+        if(!document.querySelector(".sidebar").classList.contains("active")){
+            
+            if(position == 0 && !document.querySelector(".sidebar").classList.contains("active")){
             document.querySelector(".menu").classList.add("active")
         }else{
             document.querySelector(".menu").classList.remove("active")
@@ -56,30 +76,20 @@ function scrolldown(event){
     
 // }
 
+console.log(disable)
+console.log(position)
 
 function menu_open(){
     menu = document.querySelector(".sidebar")
     menu.classList.toggle("active")
-    if(position != 0 || !document.URL.includes("index")){
+    if(position != 0 || !disable){
         document.querySelector(".menu").classList.toggle("active")
 
     }
 }
 
-window.setInterval(function(){
-    
-}, 500);
+
 
 
 // s = document.querySelector(".menu")
 // s.addEventListener("click", menu_open)
-
-//  disables scroll on index
-if (document.URL.includes("index")) {
-    document.body.classList.add("disablescroll")
-    document.querySelector(".menu").classList.add("active")
-}else{
-    position = 1
-}
-
-// console.log(document.URL)

@@ -9,6 +9,8 @@ body{
 
 .wrapper{
     background-color: var(--bgc);
+    min-width: 100vw;
+    min-height: 100vh;
 }
 
 .disablescroll{
@@ -29,7 +31,7 @@ h3{
     position: fixed;
     top: 10px;
     right: 10px;
-    z-index: 10;
+    z-index: 21;
 }
 
 .menu:hover{
@@ -42,7 +44,7 @@ h3{
     position: relative;
 }
 
-.category, .imgbox{
+.category, .imgbox, .shopimgbox{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -134,7 +136,7 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    z-index: 20;
 }
 
 .sidebar.active{
@@ -219,6 +221,68 @@ h3{
     background-image: url("../img/snowy_2_800x1024.jpg")
 }
 
+.mountain:nth-of-type(1){
+    background-image: url('../img/mountain_1_800x1024.jpg');
+}
+.mountain:nth-of-type(2){
+    background-image: url('../img/mountain_2_800x1024.jpg');
+}
+.mountain:nth-of-type(3){
+    background-image: url('../img/mountain_3_800x1024.jpg');
+}
+.mountain:nth-of-type(4){
+    background-image: url('../img/mountain_4_800x1024.jpg');
+}
+.mountain:nth-of-type(5){
+    background-image: url('../img/mountain_5_800x1024.jpg');
+}
+.mountain:nth-of-type(6){
+    background-image: url('../img/mountain_6_800x1024.jpg');
+}
+.mountain:nth-of-type(7){
+    background-image: url('../img/mountain_7_800x1024.jpg');
+}
+.mountain:nth-of-type(8){
+    background-image: url('../img/mountain_8_800x1024.jpg');
+}
+.mountain:nth-of-type(9){
+    background-image: url('../img/mountain_9_800x1024.jpg');
+}
+.mountain:nth-of-type(10){
+    background-image: url('../img/mountain_10_800x1024.jpg');
+}
+
+.art:nth-of-type(1){
+    background-image: url('../img/art_1_800x1024.jpg');
+}
+.art:nth-of-type(2){
+    background-image: url('../img/art_2_800x1024.jpg');
+}
+.art:nth-of-type(3){
+    background-image: url('../img/art_3_800x1024.jpg');
+}
+.art:nth-of-type(4){
+    background-image: url('../img/art_4_800x1024.jpg');
+}
+.art:nth-of-type(5){
+    background-image: url('../img/art_5_800x1024.jpg');
+}
+.art:nth-of-type(6){
+    background-image: url('../img/art_6_800x1024.jpg');
+}
+.art:nth-of-type(7){
+    background-image: url('../img/art_7_800x1024.jpg');
+}
+.art:nth-of-type(8){
+    background-image: url('../img/art_8_800x1024.jpg');
+}
+.art:nth-of-type(9){
+    background-image: url('../img/art_9_800x1024.jpg');
+}
+.art:nth-of-type(10){
+    background-image: url('../img/art_10_800x1024.jpg');
+}
+
 
 
 footer{
@@ -256,6 +320,75 @@ footer h3{
 li{
     margin-bottom: 5px;
 
+}
+
+/* ------------------------------------------------- shop ------------------------------------------------- */
+
+.shopbox{
+    /* display: flex; */
+    position: relative;
+    padding-top: 50px;
+    margin-left: 50px;
+    height: 150px;
+}
+
+.shopbox p, h3{
+    color: white;
+    margin: 0;
+    margin-left: 5px;
+}
+
+/* .shopbox p{
+    color: white;
+    margin: 0;
+}
+
+.shopbox h3{
+    margin: 0;
+} */
+
+.shopimgbox{
+    width: 200px;
+    height: 100px;
+    border: solid white 1px;
+    position: absolute;
+    top: 100px;
+}
+
+
+.shopimgbox:nth-child(1){
+    background-image: url('../img/snowy_1_800x1024.jpg');
+    left: 0px;
+    z-index: 10;
+}
+.shopimgbox:nth-child(2){
+    background-image: url('../img/snowy_2_800x1024.jpg');
+    left: 15px;
+    z-index: 9;
+}
+.shopimgbox:nth-child(3){
+    background-image: url('../img/snowy_3_800x1024.jpg');
+    left: 30px;
+    z-index: 8;
+}
+.shopimgbox:nth-child(4){
+    background-image: url('../img/snowy_4_800x1024.jpg');
+    left: 45px;
+    z-index: 7;
+}
+.shopimgbox:nth-child(5){
+    background-image: url('../img/snowy_5_800x1024.jpg');
+    left: 60px;
+    z-index: 6;
+}
+.shopimgbox:nth-child(6){
+    background-image: url('../img/snowy_6_800x1024.jpg');
+    left: 75px;
+    z-index: 5;
+}
+
+.shopimgbox:hover{
+    z-index: 11;
 }
 
 
