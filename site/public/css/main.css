@@ -465,4 +465,66 @@ li{
     .snow:nth-of-type(10){
         background-image: url("../img/snowy_2_1920x1080.jpg")
     }
+    
+    .mountain:nth-of-type(1){
+        background-image: url('../img/mountain_1_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(2){
+        background-image: url('../img/mountain_2_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(3){
+        background-image: url('../img/mountain_3_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(4){
+        background-image: url('../img/mountain_4_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(5){
+        background-image: url('../img/mountain_5_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(6){
+        background-image: url('../img/mountain_6_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(7){
+        background-image: url('../img/mountain_7_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(8){
+        background-image: url('../img/mountain_8_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(9){
+        background-image: url('../img/mountain_9_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(10){
+        background-image: url('../img/mountain_10_1920x1080.jpg');
+    }
+    
+    .art:nth-of-type(1){
+        background-image: url('../img/art_1_1920x1080.jpg');
+    }
+    .art:nth-of-type(2){
+        background-image: url('../img/art_2_1920x1080.jpg');
+    }
+    .art:nth-of-type(3){
+        background-image: url('../img/art_3_1920x1080.jpg');
+    }
+    .art:nth-of-type(4){
+        background-image: url('../img/art_4_1920x1080.jpg');
+    }
+    .art:nth-of-type(5){
+        background-image: url('../img/art_5_1920x1080.jpg');
+    }
+    .art:nth-of-type(6){
+        background-image: url('../img/art_6_1920x1080.jpg');
+    }
+    .art:nth-of-type(7){
+        background-image: url('../img/art_7_1920x1080.jpg');
+    }
+    .art:nth-of-type(8){
+        background-image: url('../img/art_8_1920x1080.jpg');
+    }
+    .art:nth-of-type(9){
+        background-image: url('../img/art_9_1920x1080.jpg');
+    }
+    .art:nth-of-type(10){
+        background-image: url('../img/art_10_1920x1080.jpg');
+    }
 }
