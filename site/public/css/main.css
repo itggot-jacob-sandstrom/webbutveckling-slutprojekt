@@ -11,6 +11,8 @@ body{
     background-color: var(--bgc);
     min-width: 100vw;
     min-height: 100vh;
+    position: absolute;
+    top: 0;
 }
 
 .disablescroll{
@@ -158,6 +160,12 @@ h3{
     color: white;
     margin: 10px;
     font-size: 2rem;
+    transition: 100ms;
+}
+
+.menuitem:hover{
+    transform: scale(1.1);
+    transition: 100ms;
 }
 
 .contentbox{
@@ -327,9 +335,16 @@ li{
 .shopbox{
     /* display: flex; */
     position: relative;
-    padding-top: 50px;
+    margin-top: 50px;
     margin-left: 50px;
-    height: 150px;
+    margin-right: 50px;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.shopbox:hover{
+    border: 1px white solid;
+
 }
 
 .shopbox p, h3{
@@ -387,9 +402,7 @@ li{
     z-index: 5;
 }
 
-.shopimgbox:hover{
-    z-index: 11;
-}
+
 
 
 @media only screen and (min-width: 800px){
@@ -426,11 +439,9 @@ li{
     #snowy{
         background-image: url("../img/snowy_1_1920x1080.jpg");
     }
-    
     #mountains{
         background-image: url("../img/mountain_2_1920x1080.jpg");
     }
-    
     #artistic{
         background-image: url("../img/art_2_1920x1080.jpg");
     }
@@ -526,5 +537,27 @@ li{
     }
     .art:nth-of-type(10){
         background-image: url('../img/art_10_1920x1080.jpg');
+    }
+
+    .shopbox{
+        position: unset;
+    }
+    
+    .shopimgboxbox{
+        display: flex;
+
+    }
+
+    .shopimgbox{
+        position: unset;
+        margin: 10px;
+        transition: 100ms;
+
+    }
+
+    .shopimgbox:hover{
+        transform: scale(1.1);
+        transition: 100ms;
+
     }
 }
