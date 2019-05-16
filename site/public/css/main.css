@@ -13,6 +13,7 @@ body{
     min-height: 100vh;
     position: absolute;
     top: 0;
+    overflow-x: hidden; 
 }
 
 .disablescroll{
@@ -46,7 +47,7 @@ h3{
     position: relative;
 }
 
-.category, .imgbox, .shopimgbox{
+.category, .imgbox, .shopimgbox, .imagebox{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -160,6 +161,7 @@ h3{
     color: white;
     margin: 10px;
     font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     transition: 100ms;
 }
 
@@ -403,6 +405,29 @@ li{
 }
 
 
+/* ----------------------------------------------- about ----------------------------------------------------- */
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh 50vh;
+}
+
+.gridbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagebox{
+    height: 40vh;
+    width: 40vw;
+    background-image: url("../img/Jacob.jpg");
+}
+
+.textbox{
+    color: white;
+}
 
 
 @media only screen and (min-width: 800px){
