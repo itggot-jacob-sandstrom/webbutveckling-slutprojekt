@@ -10,7 +10,7 @@ disable = false
 //  disables scroll on index
 if (document.URL.includes("index")) {
     document.body.classList.add("disablescroll")
-    position = Math.floor(window.scrollY / document.querySelector('.categorylink').clientHeight)
+    position = Math.floor(window.scrollY / document.querySelector('.categorylink').clientHeight + 0.1)
     if( position == 0){
 
         document.querySelector(".menu").classList.add("active")

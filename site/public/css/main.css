@@ -5,6 +5,7 @@
 body{
     margin: 0;
     width: 100vw;
+    overflow-x: hidden; 
 }
 
 .wrapper{
@@ -13,7 +14,10 @@ body{
     min-height: 100vh;
     position: absolute;
     top: 0;
-    overflow-x: hidden; 
+}
+
+.menuitem,.textbox{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .disablescroll{
@@ -413,20 +417,34 @@ li{
     grid-template-rows: 50vh 50vh;
 }
 
-.gridbox{
+.gridbox,.textbox{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .imagebox{
     height: 40vh;
     width: 40vw;
-    background-image: url("../img/Jacob.jpg");
+}
+
+#box1{
+    background-image: url("../img/Jacob1_400x400.jpg");
+    
+}
+#box2{
+    background-image: url("../img/Jacob2_400x400.jpg");
 }
 
 .textbox{
     color: white;
+    height: 30vh;
+    width: 30vw;
+}
+
+ul{
+    padding-inline-start: 0;
 }
 
 
@@ -584,5 +602,20 @@ li{
         transform: scale(1.1);
         transition: 100ms;
 
+    }
+
+    .textbox{
+        font-size: 2rem;
+    }
+
+    .textbox h2{
+        margin-bottom: 5px;
+    }
+
+    #box1{
+        background-image: url("../img/Jacob1_1024x618.jpg")
+    }
+    #box2{
+        background-image: url("../img/Jacob2_1024x715.jpg")
     }
 }
