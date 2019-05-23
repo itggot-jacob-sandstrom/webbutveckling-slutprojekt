@@ -1,0 +1,621 @@
+:root{
+    --bgc: rgb(2,5,71);
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden; 
+}
+
+.wrapper{
+    background-color: var(--bgc);
+    min-width: 100vw;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+}
+
+.menuitem,.textbox{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.disablescroll{
+    overflow: hidden;    
+}
+
+
+h1{
+    margin: 0;
+}
+
+h3{
+    color: white;
+}
+
+
+.menu{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 21;
+}
+
+.menu:hover{
+    
+}
+
+
+.category{
+    height: 100vh;
+    position: relative;
+}
+
+.category, .imgbox, .shopimgbox, .imagebox{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#snowy{
+    background-image: url("../img/snowy_1_800x1024.jpg");
+}
+
+#mountains{
+    background-image: url("../img/mountain_2_800x1024.jpg");
+}
+
+#artistic{
+    background-image: url("../img/art_2_800x1024.jpg");
+}
+
+.category, .categorylink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.categorylink, a{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 100%;
+}
+
+.arrowdown, .arrowup{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border: solid 3px black;
+    border-radius: 50%;
+}
+
+.arrowdown{
+    bottom: 20px;
+}
+
+.arrowup{
+    top: 20px;
+}
+
+.material-icons.icon{ 
+    animation: size 2s   infinite linear;
+    font-size: 24px;
+}
+
+@keyframes size{
+    0%{
+        border-width: 3px;
+    }
+    
+    50%{
+        border-width: 5px;
+    }
+    
+    100%{
+        border-width: 3px;
+    }
+}
+
+.start{
+    color: white;
+}
+
+.start .arrowdown{
+    border-color: white;
+}
+
+.sidebar{
+    position: fixed;
+    height: 100vh;
+    width: 130px;
+    top: 0;
+    padding: 40px 20px 20px 20px;
+    /* bottom: 0; */
+    right: -200px;
+    background-color: rgb(2,5,71);
+    border: solid 2px white;
+    /* border-bottom-right-radius: 70px; */
+    transition: 300ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 20;
+}
+
+.sidebar.active{
+    transition: 400ms;
+    right: 0;
+}
+
+.menu.active{
+    color: white;
+}
+
+.menuitems{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menuitem{
+    color: white;
+    margin: 10px;
+    font-size: 2rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 100ms;
+}
+
+.menuitem:hover{
+    transform: scale(1.1);
+    transition: 100ms;
+}
+
+.contentbox{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows: repeat(auto-fill, 50vw); */
+
+}
+
+.imgbox{
+    /* border: solid 1px blue; */
+    height: 50vw;
+    box-sizing: border-box;
+}
+
+.imgbox:nth-of-type(8n+3){
+    grid-row: span 2;
+    height: 100vw;
+}
+
+.imgbox:nth-of-type(8n-2){
+    grid-row: span 2;
+    height: 100vw;
+}
+.imgbox:nth-of-type(4n-3){
+    grid-column: span 2;
+}
+
+.snow{
+    background-position: center;
+}
+
+.snow:nth-of-type(1){
+    background-image: url("../img/snowy_1_800x1024.jpg")
+}
+.snow:nth-of-type(2){
+    background-image: url("../img/snowy_2_800x1024.jpg")
+}
+.snow:nth-of-type(3){
+    background-image: url("../img/snowy_3_800x1024.jpg")
+}
+.snow:nth-of-type(4){
+    background-image: url("../img/snowy_4_800x1024.jpg")
+}
+.snow:nth-of-type(5){
+    background-image: url("../img/mountain_1_800x1024.jpg")
+}
+.snow:nth-of-type(6){
+    background-image: url("../img/mountain_2_800x1024.jpg")
+}
+.snow:nth-of-type(7){
+    background-image: url("../img/mountain_3_800x1024.jpg")
+}
+.snow:nth-of-type(8){
+    background-image: url("../img/mountain_4_800x1024.jpg")
+}
+.snow:nth-of-type(9){
+    background-image: url("../img/snowy_1_800x1024.jpg")
+}
+.snow:nth-of-type(10){
+    background-image: url("../img/snowy_2_800x1024.jpg")
+}
+
+.mountain:nth-of-type(1){
+    background-image: url('../img/mountain_1_800x1024.jpg');
+}
+.mountain:nth-of-type(2){
+    background-image: url('../img/mountain_2_800x1024.jpg');
+}
+.mountain:nth-of-type(3){
+    background-image: url('../img/mountain_3_800x1024.jpg');
+}
+.mountain:nth-of-type(4){
+    background-image: url('../img/mountain_4_800x1024.jpg');
+}
+.mountain:nth-of-type(5){
+    background-image: url('../img/mountain_5_800x1024.jpg');
+}
+.mountain:nth-of-type(6){
+    background-image: url('../img/mountain_6_800x1024.jpg');
+}
+.mountain:nth-of-type(7){
+    background-image: url('../img/mountain_7_800x1024.jpg');
+}
+.mountain:nth-of-type(8){
+    background-image: url('../img/mountain_8_800x1024.jpg');
+}
+.mountain:nth-of-type(9){
+    background-image: url('../img/mountain_9_800x1024.jpg');
+}
+.mountain:nth-of-type(10){
+    background-image: url('../img/mountain_10_800x1024.jpg');
+}
+
+.art:nth-of-type(1){
+    background-image: url('../img/art_1_800x1024.jpg');
+}
+.art:nth-of-type(2){
+    background-image: url('../img/art_2_800x1024.jpg');
+}
+.art:nth-of-type(3){
+    background-image: url('../img/art_3_800x1024.jpg');
+}
+.art:nth-of-type(4){
+    background-image: url('../img/art_4_800x1024.jpg');
+}
+.art:nth-of-type(5){
+    background-image: url('../img/art_5_800x1024.jpg');
+}
+.art:nth-of-type(6){
+    background-image: url('../img/art_6_800x1024.jpg');
+}
+.art:nth-of-type(7){
+    background-image: url('../img/art_7_800x1024.jpg');
+}
+.art:nth-of-type(8){
+    background-image: url('../img/art_8_800x1024.jpg');
+}
+.art:nth-of-type(9){
+    background-image: url('../img/art_9_800x1024.jpg');
+}
+.art:nth-of-type(10){
+    background-image: url('../img/art_10_800x1024.jpg');
+}
+
+
+
+footer{
+    height: 100px;
+
+}
+
+footer h3{
+    margin: 10px;
+    margin-left: 40px;
+}
+
+.contactbox{
+    display: flex;
+    
+}
+
+.contactinfo, .contactcategory{
+    list-style: none;
+    color: white;
+    margin-top: 0;
+}
+
+.contactcategory{
+    margin-left: 40px;
+    padding-left: 0;
+
+}
+
+.contactinfo{
+    padding-left: 10px;
+    
+}
+
+li{
+    margin-bottom: 5px;
+
+}
+
+/* ------------------------------------------------- shop ------------------------------------------------- */
+
+.shopbox{
+    /* display: flex; */
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    height: 200px;
+    box-sizing: border-box;
+}
+
+.shopbox:hover{
+    border: 1px white solid;
+
+}
+
+.shopbox p, h3{
+    color: white;
+    margin: 0;
+    margin-left: 5px;
+}
+
+/* .shopbox p{
+    color: white;
+    margin: 0;
+}
+
+.shopbox h3{
+    margin: 0;
+} */
+
+.shopimgbox{
+    width: 200px;
+    height: 100px;
+    border: solid white 1px;
+    position: absolute;
+    top: 100px;
+}
+
+
+.shopimgbox:nth-child(1){
+    background-image: url('../img/snowy_1_800x1024.jpg');
+    left: 0px;
+    z-index: 10;
+}
+.shopimgbox:nth-child(2){
+    background-image: url('../img/snowy_2_800x1024.jpg');
+    left: 15px;
+    z-index: 9;
+}
+.shopimgbox:nth-child(3){
+    background-image: url('../img/snowy_3_800x1024.jpg');
+    left: 30px;
+    z-index: 8;
+}
+.shopimgbox:nth-child(4){
+    background-image: url('../img/snowy_4_800x1024.jpg');
+    left: 45px;
+    z-index: 7;
+}
+.shopimgbox:nth-child(5){
+    background-image: url('../img/snowy_5_800x1024.jpg');
+    left: 60px;
+    z-index: 6;
+}
+.shopimgbox:nth-child(6){
+    background-image: url('../img/snowy_6_800x1024.jpg');
+    left: 75px;
+    z-index: 5;
+}
+
+
+/* ----------------------------------------------- about ----------------------------------------------------- */
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50vh 50vh;
+}
+
+.gridbox,.textbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.imagebox{
+    height: 40vh;
+    width: 40vw;
+}
+
+#box1{
+    background-image: url("../img/Jacob1_400x400.jpg");
+    
+}
+#box2{
+    background-image: url("../img/Jacob2_400x400.jpg");
+}
+
+.textbox{
+    color: white;
+    height: 30vh;
+    width: 30vw;
+}
+
+ul{
+    padding-inline-start: 0;
+}
+
+
+@media only screen and (min-width: 800px){
+    .contentbox{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: repeat(auto-fill, 50vw); */
+    
+    }
+
+    .imgbox{
+        /* border: solid 1px blue; */
+        height: 25vw;
+        box-sizing: border-box;
+    }
+
+    .imgbox:nth-of-type(8n+3){
+        grid-row: span 2;
+        height: 50vw;
+    }
+    
+    .imgbox:nth-of-type(8n-2){
+        grid-row: span 2;
+        height: 50vw;
+    }
+    .imgbox:nth-of-type(4n-3){
+        grid-column: span 2;
+    }
+    .imgbox:nth-of-type(8n+0){
+        grid-column: span 2;
+    }
+
+
+    #snowy{
+        background-image: url("../img/snowy_1_1920x1080.jpg");
+    }
+    #mountains{
+        background-image: url("../img/mountain_2_1920x1080.jpg");
+    }
+    #artistic{
+        background-image: url("../img/art_2_1920x1080.jpg");
+    }
+
+    .snow:nth-of-type(1){
+        background-image: url("../img/snowy_1_1920x1080.jpg")
+    }
+    .snow:nth-of-type(2){
+        background-image: url("../img/snowy_2_1920x1080.jpg")
+    }
+    .snow:nth-of-type(3){
+        background-image: url("../img/snowy_3_1920x1080.jpg")
+    }
+    .snow:nth-of-type(4){
+        background-image: url("../img/snowy_4_1920x1080.jpg")
+    }
+    .snow:nth-of-type(5){
+        background-image: url("../img/mountain_1_1920x1080.jpg")
+    }
+    .snow:nth-of-type(6){
+        background-image: url("../img/mountain_2_1920x1080.jpg")
+    }
+    .snow:nth-of-type(7){
+        background-image: url("../img/mountain_3_1920x1080.jpg")
+    }
+    .snow:nth-of-type(8){
+        background-image: url("../img/mountain_4_1920x1080.jpg")
+    }
+    .snow:nth-of-type(9){
+        background-image: url("../img/snowy_1_1920x1080.jpg")
+    }
+    .snow:nth-of-type(10){
+        background-image: url("../img/snowy_2_1920x1080.jpg")
+    }
+    
+    .mountain:nth-of-type(1){
+        background-image: url('../img/mountain_1_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(2){
+        background-image: url('../img/mountain_2_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(3){
+        background-image: url('../img/mountain_3_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(4){
+        background-image: url('../img/mountain_4_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(5){
+        background-image: url('../img/mountain_5_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(6){
+        background-image: url('../img/mountain_6_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(7){
+        background-image: url('../img/mountain_7_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(8){
+        background-image: url('../img/mountain_8_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(9){
+        background-image: url('../img/mountain_9_1920x1080.jpg');
+    }
+    .mountain:nth-of-type(10){
+        background-image: url('../img/mountain_10_1920x1080.jpg');
+    }
+    
+    .art:nth-of-type(1){
+        background-image: url('../img/art_1_1920x1080.jpg');
+    }
+    .art:nth-of-type(2){
+        background-image: url('../img/art_2_1920x1080.jpg');
+    }
+    .art:nth-of-type(3){
+        background-image: url('../img/art_3_1920x1080.jpg');
+    }
+    .art:nth-of-type(4){
+        background-image: url('../img/art_4_1920x1080.jpg');
+    }
+    .art:nth-of-type(5){
+        background-image: url('../img/art_5_1920x1080.jpg');
+    }
+    .art:nth-of-type(6){
+        background-image: url('../img/art_6_1920x1080.jpg');
+    }
+    .art:nth-of-type(7){
+        background-image: url('../img/art_7_1920x1080.jpg');
+    }
+    .art:nth-of-type(8){
+        background-image: url('../img/art_8_1920x1080.jpg');
+    }
+    .art:nth-of-type(9){
+        background-image: url('../img/art_9_1920x1080.jpg');
+    }
+    .art:nth-of-type(10){
+        background-image: url('../img/art_10_1920x1080.jpg');
+    }
+
+    .shopbox{
+        position: unset;
+    }
+    
+    .shopimgboxbox{
+        display: flex;
+
+    }
+
+    .shopimgbox{
+        position: unset;
+        margin: 10px;
+        transition: 100ms;
+
+    }
+
+    .shopimgbox:hover{
+        transform: scale(1.1);
+        transition: 100ms;
+
+    }
+
+    .textbox{
+        font-size: 2rem;
+    }
+
+    .textbox h2{
+        margin-bottom: 5px;
+    }
+
+    #box1{
+        background-image: url("../img/Jacob1_1024x618.jpg")
+    }
+    #box2{
+        background-image: url("../img/Jacob2_1024x715.jpg")
+    }
+}
