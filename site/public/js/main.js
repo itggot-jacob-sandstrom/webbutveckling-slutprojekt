@@ -2,8 +2,6 @@ objects = document.getElementsByClassName("category")
 
 position = 0
 
-disable = false
-
 // window.location.href = 'index.html';
 
 
@@ -11,41 +9,8 @@ disable = false
 if (document.URL.includes("index")) {
     document.body.classList.add("disablescroll")
     position = Math.floor(window.scrollY / document.querySelector('.categorylink').clientHeight + 0.1)
-    if( position == 0){
-
-        document.querySelector(".menu").classList.add("active")
-    }
-    disable = true
 }else{
     position = 1
-}
-
-if (document.URL.includes("shop")){
-    disable = true
-    document.querySelector(".menu").classList.add("active")
-}
-console.log(document.URL)
-// console.log(y)
-
-function load(){
-    // objects[0].scrollIntoView({
-        //     behavior: "smooth"
-        // });
-        // console.log("loaded")
-        // start = document.querySelector(".start")
-        // start.scrollIntoView("smooth");
-    }
-    
-    function menucolor(){
-        if(!document.querySelector(".sidebar").classList.contains("active")){
-            
-            if(position == 0 && !document.querySelector(".sidebar").classList.contains("active")){
-            document.querySelector(".menu").classList.add("active")
-        }else{
-            document.querySelector(".menu").classList.remove("active")
-        }
-    }
-    // console.log(document.querySelector(".sidebar").classList.contains("active"))
 }
 
 function scrollup(event){
@@ -64,32 +29,37 @@ function scrolldown(event){
     setTimeout(menucolor, 500)
 }
 
-// down = document.getElementsByClassName("arrowdown");
-// for (let index = 0; index < down.length; index++) {
-//     down[index].addEventListener("click", scrolldown);
-    
-// }
-
-// up = document.getElementsByClassName("arrowup");
-// for (let index = 0; index < up.length; index++) {
-//     up[index].addEventListener("click", scrollup);
-    
-// }
-
-console.log(disable)
-console.log(position)
-
 function menu_open(){
     menu = document.querySelector(".sidebar")
     menu.classList.toggle("active")
-    if(position != 0 || !disable){
-        document.querySelector(".menu").classList.toggle("active")
+    document.querySelector(".menucloser").classList.toggle("active")
+}
 
+let big = false
+function popup(inp){
+    let imgboxes = document.querySelectorAll(".shopimgbox")
+    imgboxes[inp].classList.toggle("popup")
+    imgboxes[inp].parentElement.parentElement.classList.toggle("disableRelative")
+    
+    
+    imgi = inp
+    if(inp > 5){
+        imgi -= 6
+    }
+    if(imgi == 4){
+        imgi = 0
+    }
+    if(imgi == 5){
+        imgi = 1
+    }
+    let url = "../img/snowy_" + `${imgi + 1}` + "_1920x1080.jpg"
+    let img = `url(${url})`
+    if(!big){
+        big = true
+        imgboxes[inp].style.backgroundImage= img
+    }else{
+        big = false
+        imgboxes[inp].removeAttribute("style");
     }
 }
 
-
-
-
-// s = document.querySelector(".menu")
-// s.addEventListener("click", menu_open)

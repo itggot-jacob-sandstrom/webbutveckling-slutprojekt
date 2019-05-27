@@ -1,4 +1,4 @@
-
+<div class="headerspace"></div>
 
 <% 2.times do |i| %>
 
@@ -7,7 +7,7 @@
         <p><%= i*4+69 %> $</p>
         <div class="shopimgboxbox">
             <% 6.times do |j| %>
-                <div class="shopimgbox"></div>
+                <div class="shopimgbox" onclick="popup(<%= i*6 + j %>)" ></div>
             <% end %>
         </div>
     </article>

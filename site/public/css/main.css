@@ -39,6 +39,11 @@ h3{
     top: 10px;
     right: 10px;
     z-index: 21;
+    background-color: var(--bgc);
+    padding: 3px;
+    border-radius: 20%;
+    border: white 1px solid;
+    color: white;
 }
 
 .category{
@@ -150,8 +155,22 @@ h3{
     right: 0;
 }
 
-.menu.active{
+/* .menu.active{
     color: white;
+} */
+
+.menucloser{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+}
+
+.menucloser.active{
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
 }
 
 .menuitems{
@@ -247,22 +266,22 @@ h3{
     background-image: url('../img/mountain_4_800x1024.jpg');
 }
 .mountain:nth-of-type(5){
-    background-image: url('../img/mountain_5_800x1024.jpg');
+    background-image: url('../img/mountain_2_800x1024.jpg');
 }
 .mountain:nth-of-type(6){
-    background-image: url('../img/mountain_6_800x1024.jpg');
+    background-image: url('../img/mountain_3_800x1024.jpg');
 }
 .mountain:nth-of-type(7){
-    background-image: url('../img/mountain_7_800x1024.jpg');
+    background-image: url('../img/mountain_1_800x1024.jpg');
 }
 .mountain:nth-of-type(8){
-    background-image: url('../img/mountain_8_800x1024.jpg');
+    background-image: url('../img/mountain_2_800x1024.jpg');
 }
 .mountain:nth-of-type(9){
-    background-image: url('../img/mountain_9_800x1024.jpg');
+    background-image: url('../img/mountain_4_800x1024.jpg');
 }
 .mountain:nth-of-type(10){
-    background-image: url('../img/mountain_10_800x1024.jpg');
+    background-image: url('../img/mountain_3_800x1024.jpg');
 }
 
 .art:nth-of-type(1){
@@ -275,25 +294,25 @@ h3{
     background-image: url('../img/art_3_800x1024.jpg');
 }
 .art:nth-of-type(4){
-    background-image: url('../img/art_4_800x1024.jpg');
+    background-image: url('../img/art_2_800x1024.jpg');
 }
 .art:nth-of-type(5){
-    background-image: url('../img/art_5_800x1024.jpg');
+    background-image: url('../img/art_1_800x1024.jpg');
 }
 .art:nth-of-type(6){
-    background-image: url('../img/art_6_800x1024.jpg');
+    background-image: url('../img/art_2_800x1024.jpg');
 }
 .art:nth-of-type(7){
-    background-image: url('../img/art_7_800x1024.jpg');
+    background-image: url('../img/art_3_800x1024.jpg');
 }
 .art:nth-of-type(8){
-    background-image: url('../img/art_8_800x1024.jpg');
+    background-image: url('../img/art_1_800x1024.jpg');
 }
 .art:nth-of-type(9){
-    background-image: url('../img/art_9_800x1024.jpg');
+    background-image: url('../img/art_2_800x1024.jpg');
 }
 .art:nth-of-type(10){
-    background-image: url('../img/art_10_800x1024.jpg');
+    background-image: url('../img/art_3_800x1024.jpg');
 }
 
 
@@ -348,11 +367,6 @@ li{
     border: 1px rgba(0, 0, 0, 0) solid;
 }
 
-.shopbox:hover{
-    border-color: white;
-
-}
-
 .shopbox p, h3{
     color: white;
     margin: 0;
@@ -373,41 +387,40 @@ li{
     height: 100px;
     border: solid white 1px;
     position: absolute;
-    top: 100px;
+    top: 60px;
 }
 
 
 .shopimgbox:nth-child(1){
-    background-image: url('../img/snowy_1_800x1024.jpg');
+    background-image: url('../img/snowy_1_220x110.jpg');
     left: 0px;
     z-index: 10;
 }
 .shopimgbox:nth-child(2){
-    background-image: url('../img/snowy_2_800x1024.jpg');
+    background-image: url('../img/snowy_2_220x110.jpg');
     left: 15px;
     z-index: 9;
 }
 .shopimgbox:nth-child(3){
-    background-image: url('../img/snowy_3_800x1024.jpg');
+    background-image: url('../img/snowy_3_220x110.jpg');
     left: 30px;
     z-index: 8;
 }
 .shopimgbox:nth-child(4){
-    background-image: url('../img/snowy_4_800x1024.jpg');
+    background-image: url('../img/snowy_4_220x110.jpg');
     left: 45px;
     z-index: 7;
 }
 .shopimgbox:nth-child(5){
-    background-image: url('../img/snowy_1_800x1024.jpg');
+    background-image: url('../img/snowy_1_220x110.jpg');
     left: 60px;
     z-index: 6;
 }
 .shopimgbox:nth-child(6){
-    background-image: url('../img/snowy_2_800x1024.jpg');
+    background-image: url('../img/snowy_2_220x110.jpg');
     left: 75px;
     z-index: 5;
 }
-
 
 /* ----------------------------------------------- about ----------------------------------------------------- */
 
@@ -449,6 +462,10 @@ ul{
 
 
 @media only screen and (min-width: 800px){
+    .headerspace{
+        height: 80px;
+    }
+
     .sidebar{
         position: fixed;
         left: 0;
@@ -466,7 +483,7 @@ ul{
     }
 
     .menu{
-        display: none;
+        visibility: hidden;
     }
     
     .menuitems{
@@ -626,6 +643,10 @@ ul{
 
     }
 
+    .shopbox:hover{
+        border-color: white;
+
+    }
     .shopimgbox:hover{
         transform: scale(1.1);
         transition: 100ms;
@@ -646,4 +667,24 @@ ul{
     #box2{
         background-image: url("../img/Jacob2_1024x715.jpg")
     }
+}
+
+.disableRelative{
+    position: unset;
+}
+
+.popup{
+    position: absolute;
+    top: 0vh;
+    left: 0vw !important;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+    z-index: 22 !important;
+    border-width: 0;
+}
+
+.popup:hover{
+    transform: scale(1);
 }
